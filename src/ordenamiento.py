@@ -1,9 +1,15 @@
 def evaluar(numero1, numero2, numero3, numero4):
-    # Usar sorted() para ordenar los números
+    # Usaré el algoritmo de ordenamiento burbuja
     numeros = [numero1, numero2, numero3, numero4]
-    numeros_ordenados = sorted(numeros)
-    # Crear una cadena con los números ordenados
-    return ' '.join(map(str, numeros_ordenados))
+    nu = len(numeros)
+    for i in range(nu - 1):
+        for j in range(nu - i - 1):
+            if numeros[j] > numeros[j + 1]:
+                temp = numeros[j]
+                numeros[j] = numeros[j + 1]
+                numeros[j + 1] = temp
+    # Crear una cadena sin modificar un número
+    return ' '.join(map(str, numeros))
 
 def main():
     numero1 = int(input("Número 1: "))
@@ -13,6 +19,3 @@ def main():
 
     respuesta = evaluar(numero1, numero2, numero3, numero4)
     print(respuesta)
-
-if __name__ == "__main__":
-    main()
