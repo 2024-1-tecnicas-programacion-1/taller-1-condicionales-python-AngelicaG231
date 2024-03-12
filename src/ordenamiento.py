@@ -1,16 +1,18 @@
 def evaluar(numero1, numero2, numero3, numero4):
-    # TODO: Coloca aquí el código del ejercicio 5: Ordenamiento
-    return "";
+    # Usar sorted() para ordenar los números
+    numeros = [numero1, numero2, numero3, numero4]
+    numeros_ordenados = sorted(numeros)
+    # Crear una cadena con los números ordenados
+    return ' '.join(map(str, numeros_ordenados))
 
-if __name__ == '__main__':
-    print("Número 1:", end="")
-    numero1 = int(input())
-    print("Número 2:", end="")
-    numero2 = int(input())
-    print("Número 3:", end="")
-    numero3 = int(input())
-    print("Número 4:", end="")
-    numero4 = int(input())
-        
+def main():
+    numero1 = int(input("Número 1: "))
+    numero2 = int(input("Número 2: "))
+    numero3 = int(input("Número 3: "))
+    numero4 = int(input("Número 4: "))
+
     respuesta = evaluar(numero1, numero2, numero3, numero4)
     print(respuesta)
+
+if __name__ == "__main__":
+    main()
